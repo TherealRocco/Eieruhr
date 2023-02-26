@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The_real_Eieruhr</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
+  </head>
+
+  <body class="background-dark">
+    <a href="#" onclick="openMenu()">
+      <img src="img/menu.png" alt="menu" width="50px" height="50px" />
+    </a>
+    <div class="center margin-top">
+      <img class="brighten" src="img/egg.png" alt="menu" width="200px" />
+    </div>
+
+    <div class="timer margin-top center textStyle" id="timer">05 : 00</div>
+    <div id="counter" class="margin-top center textStyleCounter">0</div>
+
+    <div class="center margin-top">
+      <img
+        onclick="startOrResetTimer()"
+        src="img/btn.png"
+        alt="menu"
+        width="180px"
+      />
+      <!--onclick verbindet den button mit der startTimer function-->
+    </div>
+  </body>
+</html>
