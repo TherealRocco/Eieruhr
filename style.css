@@ -51,8 +51,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: goldenrod;
-  ;
+  background: rgba(218, 165, 32, 0.5); /* Hintergrundfarbe mit Transparenz */
+  backdrop-filter: blur(10px) brightness(120%); /* Glasseffekt mit Helligkeitsanpassung */
   transition: 0.5s;
 }
 
@@ -118,7 +118,7 @@ body {
 
 .fullPageMenu .nav ul li a {
   position: relative;
-  color: #fff;
+  color: rgb(29, 29, 29);
   text-decoration: none;
   font-size: 3em;
   font-weight: 700;
@@ -133,7 +133,7 @@ body {
   position: absolute;
   bottom: -100%;
   left: 0;
-  color: #fff;
+  color: rgb(255, 237, 192);
 }
 
 .fullPageMenu .nav ul li:hover a {
