@@ -26,7 +26,9 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-
+.current-time{
+  font-size: 20px
+}
 
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");

@@ -32,7 +32,7 @@ function startOrResetTimer() {
   } else if (count == 1) {
     // stoppen und reseten
     clearInterval(intervalId);
-    timer.innerHTML = "05 : 00";
+    timer.innerHTML = "Was los?";
     count = 0;
   }
 

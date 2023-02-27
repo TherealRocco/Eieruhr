@@ -40,9 +40,35 @@
     <div class="center margin-top">
       <img src="img/egg.png" alt="menu" width="200px" />
     </div>
+    <div class="current-time margin-top center textStyle">
+      <script>
+        function updateTime() {
+          var today = new Date();
+          var hours = today.getHours();
+          var minutes = today.getMinutes();
+          var seconds = today.getSeconds();
+          hours = checkTime(hours);
+          minutes = checkTime(minutes);
+          seconds = checkTime(seconds);
+          document.getElementById("time").innerHTML =
+            hours + ":" + minutes + ":" + seconds;
+        }
 
+        function checkTime(i) {
+          if (i < 10) {
+            i = "0" + i;
+          } // add zero in front of numbers < 10
+          return i;
+        }
+
+        setInterval(updateTime, 1000);
+      </script>
+      <div id="time"></div>
+    </div>
     <div class="timer margin-top center textStyle" id="timer">05 : 00</div>
-    <div id="counter" class="margin-top center textStyleCounter">LOGIN FÜR ZÄHLER</div>
+    <div id="counter" class="margin-top center textStyleCounter">
+      LOGIN FÜR ZÄHLER
+    </div>
 
     <div class="center margin-top">
       <img
