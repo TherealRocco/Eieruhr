@@ -1,7 +1,7 @@
 let alarm = new Audio("alarm.mp3");
 let intervalId;
 let count = 0; //der counter steht auf 0
-let counter = { month: "", eggs: 0 }; // Objekt erstellen, das Monat und Anzahl der gegessenen Eier enthält
+let counter = { month: '', eggs: 0 }; // Objekt erstellen, das Monat und Anzahl der gegessenen Eier enthält
 
 function startOrResetTimer() {
   if (count == 0) {
@@ -37,11 +37,9 @@ function startOrResetTimer() {
   }
 
   const currentDate = new Date(); // Aktuelles Datum
-  const currentMonth = currentDate.toLocaleString("de-DE", { month: "long" }); // Aktuellen Monatsnamen ermitteln
+  const currentMonth = currentDate.toLocaleString('de-DE', { month: 'long' }); // Aktuellen Monatsnamen ermitteln
   counter.month = currentMonth; // Monat in das Counter-Objekt einfügen
-  document.getElementById(
-    "counter"
-  ).innerHTML = `${counter.month}: ${counter.eggs}`; // Counter aktualisieren
+  document.getElementById("counter").innerHTML = `${counter.month}: ${counter.eggs}`; // Counter aktualisieren
 }
 
 function menuToggle() {
