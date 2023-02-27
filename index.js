@@ -1,11 +1,12 @@
 let alarm = new Audio("alarm.mp3");
 let intervalId;
 let count = 0; //der counter steht auf 0
-let counter = 0; //wieviele Eier wurden gegessen
+let counter = { month: "", eggs: 0 }; // Objekt erstellen, das Monat und Anzahl der gegessenen Eier enthält
+
 function startOrResetTimer() {
   if (count == 0) {
     // starten wenn counter auf 0
-    counter++;
+    counter.eggs++; // Anzahl der gegessenen Eier erhöhen
     let startTime = new Date().getTime(); //wann wurde der startbutton gedrückt
     let fiveMinutes = 1000 * 60 * 5; // millisekunden in 5 minuten umrechnen 300000
     let endTime = startTime + fiveMinutes; //5 minuten (300000Mmil) werden auf die startzeit addiert und erhalten, wann der Timer Stoppen soll
@@ -34,5 +35,18 @@ function startOrResetTimer() {
     timer.innerHTML = "05 : 00";
     count = 0;
   }
-  document.getElementById("counter").innerHTML = counter;
+
+  const currentDate = new Date(); // Aktuelles Datum
+  const currentMonth = currentDate.toLocaleString("de-DE", { month: "long" }); // Aktuellen Monatsnamen ermitteln
+  counter.month = currentMonth; // Monat in das Counter-Objekt einfügen
+  document.getElementById(
+    "counter"
+  ).innerHTML = `${counter.month}: ${counter.eggs}`; // Counter aktualisieren
+}
+
+function menuToggle() {
+  const nav = document.getElementById("nav");
+  const toggle = document.getElementById("toggle");
+  nav.classList.toggle("active");
+  toggle.classList.toggle("active");
 }

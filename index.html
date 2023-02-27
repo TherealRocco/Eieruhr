@@ -10,9 +10,25 @@
   </head>
 
   <body class="background-dark">
-    <a href="#" onclick="openMenu()">
-      <img src="img/menu.png" alt="menu" width="50px" height="50px" />
-    </a>
+    <div class="fullPageMenu" id="nav">
+      <div class="banner">
+        <img
+          src="https://images.unsplash.com/photo-1453989799106-bbad8d7b5191?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
+          alt="image"
+        />
+      </div>
+      <div class="nav">
+        <ul>
+          <li><a href="#" data-text="Statistik">Statistik</a></li>
+          <li><a href="#" data-text="Setup">Setup</a></li>
+          <li><a href="#" data-text="Portfolio">Portfolio</a></li>
+          <li><a href="https://de.wikipedia.org/wiki/Ei" data-text="Wikiapp.Ei">Wikiapp.Ei</a></li>
+
+          <li><a href="#" data-text="Contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <span class="menuicon" id="toggle" onclick="menuToggle()"></span>
     <div class="center margin-top">
       <img class="brighten" src="img/egg.png" alt="menu" width="200px" />
     </div>
