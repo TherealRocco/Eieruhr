@@ -8,7 +8,7 @@ function startOrResetTimer() {
     // starten wenn counter auf 0
     counter.eggs++; // Anzahl der gegessenen Eier erhöhen
     let startTime = new Date().getTime(); //wann wurde der startbutton gedrückt
-    let fiveMinutes = 1000 * 60 * 5; // millisekunden in 5 minuten umrechnen 300000
+    let fiveMinutes = 1000 * 5 * 60; // millisekunden in 5 minuten umrechnen 300000
     let endTime = startTime + fiveMinutes; //5 minuten (300000Mmil) werden auf die startzeit addiert und erhalten, wann der Timer Stoppen soll
     intervalId = setInterval(function () {
       //intervall starten
