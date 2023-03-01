@@ -25,7 +25,7 @@ function startOrResetTimer() {
       } else {
         //endet der Timer dann mache was
         alarm.play();
-        timer.innerHTML = "00 : 00";
+        timer.innerHTML = "Fertig";
       }
     }, 1000);
     count = 1; //setze counter auf 1, drückt man nochmal rauf, springt counter wieder auf 0 und resetet. somit kann man während des counters auch stoppen und zurücksetzen
